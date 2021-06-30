@@ -90,9 +90,17 @@ function modifyStrings(strings, modify) {
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     
+    //loop over the strings array
+    for (var i = 0; i < strings.length; i++) {
+        //check if the test passed on string gives back false
+            // if so return false
+        if (test(strings[i]) === false) {
+            return false;
+        }
+    }
     
-    
-    
+    //return true
+    return true;
     // YOUR CODE ABOVE HERE //
 }
 
