@@ -31,7 +31,23 @@
 // Step 4 - Add ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
+function add(animals, animal) {
+    //check if animal name length is greater than 0 and species length is greater than 0
+    if (animal.name.length > 0 && animal.species.length > 0) {
+         //use a for loop to access each animal in the animals array
+         for (var i = 0; i < animals.length; i++) {
+            //check if animal's name is the same as the animal in the array
+            //stop the loop if true using return
+            if (animals[i].name === animal.name) {
+                return;
+            }
+         }
+        //push animal into the animals array
+    animals.push(animal);
+    
+    }
+  
+}
 
 /**
  * You did it! You're all done with Matchy!
