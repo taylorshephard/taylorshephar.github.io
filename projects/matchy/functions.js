@@ -46,6 +46,19 @@ function add(animals, animal) {
     animals.push(animal);
     
     }
+    
+    
+    for (var i = 0; i < animals.length; i++) {
+        if (animals[i].name === animals.name) {
+            return;
+        }
+    }
+    
+    if (animal.name.length > 0 && animal.species.length > 0) {
+        animals.push(animal);
+    }
+    
+    
   
 }
 
