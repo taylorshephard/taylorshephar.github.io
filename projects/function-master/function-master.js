@@ -59,6 +59,8 @@ function welcomeMessage(object) {
 //////////////////////////////////////////////////////////////////////
 
 function profileInfo(object) {
+return `${object.name.charAt(0).toUpperCase() + object.name.slice(1)} is a 
+    ${object.species.charAt(0).toUpperCase() + object.species.slice(1)}`;
 
 }
 
@@ -91,7 +93,17 @@ function addFriend (name, object) {
 //////////////////////////////////////////////////////////////////////
 
 function isFriend(name, object) {
-
+ let listFriend = Object.values(object);
+    
+    console.log(name);
+    for (let i = 0; i < listFriend.length; i++) {
+       console.log(listFriend[i])
+        if (listFriend[i].toLowerCase() === name.toLowerCase()) {
+         
+            return true;
+        }
+    }
+    return false;
 }
 
 //////////////////////////////////////////////////////////////////////
